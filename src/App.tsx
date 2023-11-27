@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CodeDisplay from "./components/CodeDisplay";
+import MessagesDisplay from "./components/MessagesDisplay";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <MessagesDisplay></MessagesDisplay>
+      <input type="text" />
+      <CodeDisplay></CodeDisplay>
+      <div className="button-container">
+        <button id="get-query">Get Query</button>
+        <button id="clear-chat">Clear Chat</button>
+      </div>
     </div>
   );
 }
